@@ -1,186 +1,315 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rodrigo Rivas González | Portfolio</title>
-  <meta name="description" content="Mechatronic Engineer — Data & Business Analyst. Automotive, Motorsport & Data-driven engineering." />
+  <title>Rodrigo Rivas González — AI Automation & Data</title>
+  <meta name="description" content="I build AI agents and automated workflows that connect LLMs, APIs, and databases to real business processes. Mechatronics × Data & Business Analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="wrap">
+
     <nav class="nav">
       <a class="brand" href="#top">RR</a>
       <div class="links">
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#portfolio">Portfolio PDF</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
+    <!-- ============ HERO ============ -->
     <header class="hero" id="top">
-      <div class="card pad">
-        <span class="tag">Open to Master’s internship • Data × Mechatronics</span>
+      <div class="hero-copy">
+        <span class="tag">Open to Master&rsquo;s internship &middot; AI Automation &times; Data</span>
         <h1>Rodrigo Rivas González</h1>
         <p class="sub">
-          Mechatronic Engineer — Data & Business Analyst.
-          I specialize in data-driven engineering solutions at the intersection of automation, control systems, and analytics—applied to automotive, motorsport, and industrial automation.
+          I build <strong>AI agents and automated workflows</strong> — connecting LLMs, APIs,
+          and databases to real business processes. Currently automating quality-control
+          paperwork for one of Spain&rsquo;s largest seafood groups at
+          <strong>Optare</strong>, while finishing an MSc in Data &amp; Business Analytics.
         </p>
 
         <div class="btns">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn ghost" href="portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>
-          <a class="btn ghost" href="portfolio.pdf" download>Download PDF</a>
+          <a class="btn" href="#experience">See experience</a>
+          <a class="btn ghost" href="portfolio.pdf" target="_blank" rel="noopener">Full portfolio (PDF)</a>
         </div>
 
-        <div class="kv" id="contact">
-          <a href="mailto:Rodrivas2003@gmail.com">Rodrivas2003@gmail.com</a>
-          <span>•</span>
-          <a href="https://www.linkedin.com/in/rodrigo-rivas-gonz%C3%A1lez-451113207/" target="_blank" rel="noopener">LinkedIn</a>
-          <span>•</span>
+        <div class="kv">
+          <a href="mailto:Rorivastech@gmail.com">Rorivastech@gmail.com</a>
+          <span aria-hidden="true">&middot;</span>
+          <a href="https://www.linkedin.com/in/rodri-rivas-451113207/" target="_blank" rel="noopener">LinkedIn</a>
+          <span aria-hidden="true">&middot;</span>
           <a href="https://github.com/rodrivas2003" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
 
-      <div class="card pad">
-        <div class="section">
-          <div class="h2">About</div>
-
-          <p class="sub" style="margin-top:0">
-            I am currently pursuing a dual degree in Mechatronics Engineering and an MSc in Data & Business Analytics, with a strong interest in data-driven engineering systems. My background combines automation, control systems, and analytical modeling, allowing me to approach engineering problems from both a technical and data-oriented perspective.
-          </p>
-
-          <p class="sub">
-            I have experience across hands-on engineering and analytics projects, ranging from industrial automation and control design to data analysis, machine learning models, and performance-oriented problem solving. I am particularly interested in applying data and control theory to real-world systems under practical constraints.
-          </p>
-
-          <p class="sub">
-            I am currently seeking a master’s internship in automotive, motorsport, or industrial engineering environments, where I can contribute to data-driven decision-making, system optimization, and high-performance engineering projects.
-          </p>
-        </div>
-      </div>
+      <!-- Firma visual: el tipo de pipeline que Rodrigo construye -->
+      <figure class="hero-diagram card">
+        <svg viewBox="0 0 460 290" role="img" aria-label="Diagram of an AI automation pipeline: documents and data flow into Claude via MCP, orchestrated with n8n, producing eight hours saved per week">
+          <!-- connectors -->
+          <path class="pipe" d="M120 62 C160 62, 160 62, 200 62" />
+          <path class="pipe" d="M330 62 C368 62, 230 62, 230 108" transform="translate(0,0)" />
+          <path class="pipe" d="M265 92 C265 120, 265 120, 265 148" />
+          <path class="pipe" d="M265 208 C265 226, 265 226, 265 244" />
+          <!-- node: inputs -->
+          <g class="node">
+            <rect x="18" y="36" width="102" height="52" rx="10" />
+            <text class="n-label" x="69" y="58" text-anchor="middle">DOCS &amp; DATA</text>
+            <text class="n-sub" x="69" y="76" text-anchor="middle">PDFs · APIs · SQL</text>
+          </g>
+          <!-- node: LLM -->
+          <g class="node">
+            <rect x="200" y="36" width="130" height="52" rx="10" />
+            <text class="n-label" x="265" y="58" text-anchor="middle">CLAUDE · MCP</text>
+            <text class="n-sub" x="265" y="76" text-anchor="middle">reasoning + tools</text>
+          </g>
+          <!-- node: orchestration -->
+          <g class="node">
+            <rect x="180" y="148" width="170" height="60" rx="10" />
+            <text class="n-label" x="265" y="172" text-anchor="middle">n8n ORCHESTRATION</text>
+            <text class="n-sub" x="265" y="192" text-anchor="middle">validation · retries · routing</text>
+          </g>
+          <!-- node: result -->
+          <g class="node result">
+            <rect x="168" y="244" width="194" height="40" rx="10" />
+            <text class="n-label" x="265" y="269" text-anchor="middle">&minus;8 h / week per employee</text>
+          </g>
+        </svg>
+        <figcaption>The kind of pipeline I build: data in, hours back.</figcaption>
+      </figure>
     </header>
 
-    <!-- ✅ PROJECTS (fixed links for filenames with accents/spaces/parentheses) -->
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I&rsquo;m putting this to work</h2>
+
+      <article class="card pad xp">
+        <div class="xp-head">
+          <div>
+            <h3>AI Automation Intern — Optare</h3>
+            <p class="meta">Vigo, Spain &middot; Jun 2026 – Present</p>
+          </div>
+          <div class="stats">
+            <div class="stat"><span class="stat-n">&euro;50k/yr</span><span class="stat-l">estimated savings</span></div>
+            <div class="stat"><span class="stat-n">&minus;8 h/wk</span><span class="stat-l">manual work, per employee</span></div>
+          </div>
+        </div>
+        <p>
+          Designed and deployed AI agents with n8n and Claude (via MCP integrations) for one of
+          Spain&rsquo;s largest seafood groups, automating laboratory analysis bulletins and client
+          quality questionnaires end to end.
+        </p>
+        <ul class="chips">
+          <li>Python</li><li>Docker</li><li>n8n</li><li>Claude Code &amp; Cowork</li><li>MCP</li><li>REST APIs</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ============ FEATURED: AXIS ============ -->
+    <section class="section" id="axis">
+      <p class="eyebrow">Featured project</p>
+      <h2>Axis SaaS Solutions</h2>
+
+      <article class="card pad featured">
+        <span class="badge">In development &middot; Private beta</span>
+        <div class="feat-grid">
+          <div>
+            <h4>The problem</h4>
+            <p>Document-heavy workflows still run on manual review: slow, repetitive, and easy to get wrong.</p>
+          </div>
+          <div>
+            <h4>What I&rsquo;m building</h4>
+            <p>A multi-tenant SaaS for AI-powered document and workflow automation — LLM-based document structuring, validation pipelines, and REST APIs. First pilot: notarial workflows in Mexico.</p>
+          </div>
+          <div>
+            <h4>Stack</h4>
+            <ul class="chips">
+              <li>Python</li><li>Node.js</li><li>Docker</li><li>LLM integration</li><li>REST APIs</li><li>DB modeling</li>
+            </ul>
+          </div>
+        </div>
+        <p class="confidential">Client details are under confidentiality — happy to walk through the architecture in an interview.</p>
+      </article>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
     <section class="section" id="projects">
-      <div class="h2">Projects (direct links to full reports)</div>
+      <p class="eyebrow">Projects</p>
+      <h2>Selected work, with full reports</h2>
 
       <div class="grid">
 
-        <!-- Crane -->
-        <div class="proj">
-          <div class="proj-top">
-            <h3>Hydraulic Crane Engineering Proposal</h3>
-            <span class="pill">Mechanical • MATLAB</span>
-          </div>
-          <p>
-            Static equilibrium analysis, free-body diagrams, and MATLAB-based
-            parametric simulations to validate load capacity and feasibility.
-          </p>
-          <a href="Situaci%C3%B3n%20problema_Estatica%203er%20semestre%20grua.pdf"
-             target="_blank" rel="noopener">
-            Open PDF →
-          </a>
-        </div>
-
-        <!-- sEMG -->
-        <div class="proj">
-          <div class="proj-top">
-            <h3>sEMG Signal Conditioning Circuit</h3>
-            <span class="pill">Electronics • Biofeedback</span>
-          </div>
-          <p>
-            Design and validation of analog amplification, filtering,
-            rectification, and integration stages for muscle signal acquisition.
-          </p>
-          <a href="Report%20amplificador%20para%20musculos.pdf"
-             target="_blank" rel="noopener">
-            Open PDF →
-          </a>
-        </div>
-
-        <!-- Industrial Automation -->
-        <div class="proj">
-          <div class="proj-top">
-            <h3>BIC Pen Testing Machine (Industrial Automation)</h3>
-            <span class="pill">PLC • HMI • Automation</span>
-          </div>
-          <p>
-            Sequential PLC logic and HMI supervision for an industrial testing
-            station using Allen-Bradley controllers.
-          </p>
-          <a href="Reporte_Final_Automatización_Industrial.pdf"
-             target="_blank" rel="noopener">
-            Open PDF →
-          </a>
-        </div>
-
-        <!-- Maternal Health -->
-        <div class="proj">
+        <div class="proj card pad">
           <div class="proj-top">
             <h3>Maternal Health Risk Prediction</h3>
-            <span class="pill">Machine Learning • Python</span>
+            <span class="pill">Machine Learning &middot; Python</span>
           </div>
-          <p>
-            Data cleaning, feature scaling, outlier handling, and supervised
-            learning models for health risk classification.
-          </p>
-          <a href="portfolio.pdf#page=4"
-             target="_blank" rel="noopener">
-            Open in Portfolio PDF →
-          </a>
+          <p>Data cleaning, feature scaling, outlier handling, and supervised learning models for health risk classification.</p>
+          <a href="portfolio.pdf#page=4" target="_blank" rel="noopener">Open in portfolio PDF &rarr;</a>
         </div>
 
-        <!-- NATA -->
-        <div class="proj">
+        <div class="proj card pad">
           <div class="proj-top">
             <h3>NATA Supermarket Analytics Case</h3>
-            <span class="pill">Clustering • Forecasting</span>
+            <span class="pill">Clustering &middot; Forecasting</span>
           </div>
-          <p>
-            Customer segmentation using K-Means and demand forecasting with
-            Double Exponential Smoothing to support inventory decisions.
-          </p>
-          <a href="NATA%20Supermarket%20Case%20%281%29.pdf"
-             target="_blank" rel="noopener">
-            Open PDF →
-          </a>
+          <p>Customer segmentation using K-Means and demand forecasting with Double Exponential Smoothing to support inventory decisions.</p>
+          <a href="NATA%20Supermarket%20Case%20%281%29.pdf" target="_blank" rel="noopener">Open PDF &rarr;</a>
         </div>
 
-        <!-- Robot -->
-        <div class="proj">
+        <div class="proj card pad">
           <div class="proj-top">
-            <h3>2-DoF Robotic Arm (Control & Build)</h3>
-            <span class="pill">Control • Simulink • Robotics</span>
+            <h3>BIC Pen Testing Machine</h3>
+            <span class="pill">PLC &middot; HMI &middot; Automation</span>
           </div>
-          <p>
-            System identification, cascade PID control, trajectory planning,
-            and full physical assembly of a robotic arm.
-          </p>
-          <a href="1733185676000Evidence_format_with_rubric___Evidence_1.pdf"
-             target="_blank" rel="noopener">
-            Open PDF →
-          </a>
+          <p>Sequential PLC logic and HMI supervision for an industrial testing station using Allen-Bradley controllers.</p>
+          <a href="Reporte_Final_Automatización_Industrial.pdf" target="_blank" rel="noopener">Open PDF &rarr;</a>
+        </div>
+
+        <div class="proj card pad">
+          <div class="proj-top">
+            <h3>2-DoF Robotic Arm (Control &amp; Build)</h3>
+            <span class="pill">Control &middot; Simulink &middot; Robotics</span>
+          </div>
+          <p>System identification, cascade PID control, trajectory planning, and full physical assembly of a robotic arm.</p>
+          <a href="1733185676000Evidence_format_with_rubric___Evidence_1.pdf" target="_blank" rel="noopener">Open PDF &rarr;</a>
+        </div>
+
+        <div class="proj card pad">
+          <div class="proj-top">
+            <h3>sEMG Signal Conditioning Circuit</h3>
+            <span class="pill">Electronics &middot; Biofeedback</span>
+          </div>
+          <p>Design and validation of analog amplification, filtering, rectification, and integration stages for muscle signal acquisition.</p>
+          <a href="Report%20amplificador%20para%20musculos.pdf" target="_blank" rel="noopener">Open PDF &rarr;</a>
+        </div>
+
+        <div class="proj card pad">
+          <div class="proj-top">
+            <h3>Hydraulic Crane Engineering Proposal</h3>
+            <span class="pill">Mechanical &middot; MATLAB</span>
+          </div>
+          <p>Static equilibrium analysis, free-body diagrams, and MATLAB-based parametric simulations to validate load capacity.</p>
+          <a href="Situaci%C3%B3n%20problema_Estatica%203er%20semestre%20grua.pdf" target="_blank" rel="noopener">Open PDF &rarr;</a>
         </div>
 
       </div>
     </section>
 
-    <section class="section" id="portfolio">
-      <div class="h2">Full Portfolio</div>
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section" id="certifications">
+      <p class="eyebrow">Certifications</p>
+      <h2>Trained on the tools I ship with</h2>
+      <p class="section-sub">Anthropic Academy — the same Claude + MCP stack behind my work at Optare.</p>
 
-      <!-- iframe + fallback (more robust) -->
-      <iframe class="viewer" src="portfolio.pdf"></iframe>
-      <p class="sub" style="margin-top:10px">
-        If the embedded PDF doesn’t load, <a href="portfolio.pdf" target="_blank" rel="noopener">open it here</a> or
-        <a href="portfolio.pdf" download>download it</a>.
-      </p>
+      <div class="grid certs">
+        <!-- PEGA en cada href la URL pública de tu certificado (botón "View certificate" en Anthropic Academy) -->
+        <div class="cert card pad">
+          <h3>AI Fluency: Framework &amp; Foundations</h3>
+          <p class="meta">Anthropic Academy &middot; Jun 2026</p>
+          <a href="#" target="_blank" rel="noopener">View certificate &nearr;</a>
+        </div>
+        <div class="cert card pad">
+          <h3>Claude 101</h3>
+          <p class="meta">Anthropic Academy &middot; Jun 2026</p>
+          <a href="#" target="_blank" rel="noopener">View certificate &nearr;</a>
+        </div>
+        <div class="cert card pad">
+          <h3>Claude Platform 101</h3>
+          <p class="meta">Anthropic Academy &middot; Jun 2026</p>
+          <a href="#" target="_blank" rel="noopener">View certificate &nearr;</a>
+        </div>
+        <div class="cert card pad">
+          <h3>Introduction to Subagents</h3>
+          <p class="meta">Anthropic Academy &middot; Jun 2026</p>
+          <a href="#" target="_blank" rel="noopener">View certificate &nearr;</a>
+        </div>
+      </div>
     </section>
 
-    <footer class="foot">
-      <div>© <span id="y"></span> Rodrigo Rivas</div>
-      <div><a class="links" style="gap:0" href="#top">Back to top ↑</a></div>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <p class="eyebrow">About</p>
+      <h2>Engineer first, automator by choice</h2>
+
+      <div class="about-grid">
+        <div class="card pad">
+          <p>
+            I&rsquo;m pursuing a dual degree — Mechatronics Engineering (Tecnológico de Monterrey)
+            and an MSc in Data &amp; Business Analytics (Rennes School of Business). The engineering
+            side taught me how systems behave; the analytics side taught me how to measure them.
+            AI automation is where both meet.
+          </p>
+          <p>
+            What I enjoy most is taking a messy, manual process and turning it into a pipeline
+            that runs on its own: LLMs for the reasoning, n8n for the orchestration, APIs and
+            databases for everything in between.
+          </p>
+          <p>
+            I&rsquo;m looking for a master&rsquo;s internship in AI automation, data, or intelligent
+            systems — anywhere a repetitive process is waiting to be automated.
+          </p>
+        </div>
+
+        <div class="card pad interests">
+          <h4>Beyond the code</h4>
+          <ul>
+            <li><span>Motorsport &amp; F1</span> — I spent two years designing parts for a Formula Student team.</li>
+            <li><span>Robotics &amp; hardware</span> — if it has motors and sensors, I want to build it.</li>
+            <li><span>Automating my own life</span> — personal AI agents for the boring stuff.</li>
+            <!-- AÑADE aquí tus gustos reales (música, deporte, viajes...) con el mismo formato <li><span>Título</span> — frase corta.</li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <p class="eyebrow">Education</p>
+      <h2>Two degrees, one direction</h2>
+
+      <div class="edu">
+        <div class="card pad edu-row">
+          <div>
+            <h3>MSc in Data &amp; Business Analytics</h3>
+            <p class="meta">Rennes School of Business, France &middot; 2025 – Present</p>
+          </div>
+          <p>Predictive modeling, optimization, time series, AI infrastructure, databases, machine learning, BI.</p>
+        </div>
+        <div class="card pad edu-row">
+          <div>
+            <h3>B.S. in Mechatronics Engineering</h3>
+            <p class="meta">Tecnológico de Monterrey, Mexico &middot; 2022 – Present</p>
+          </div>
+          <p>Robotics, control systems, mechanical design, instrumentation, PLC automation, Industry 4.0.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot" id="contact">
+      <div>
+        <p class="foot-cta">Let&rsquo;s automate something.</p>
+        <div class="kv">
+          <a href="mailto:Rorivastech@gmail.com">Rorivastech@gmail.com</a>
+          <span aria-hidden="true">&middot;</span>
+          <a href="https://www.linkedin.com/in/rodri-rivas-451113207/" target="_blank" rel="noopener">LinkedIn</a>
+          <span aria-hidden="true">&middot;</span>
+          <a href="https://github.com/rodrivas2003" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="foot-meta">
+        <span>&copy; <span id="y"></span> Rodrigo Rivas</span>
+        <a href="#top">Back to top &uarr;</a>
+      </div>
     </footer>
   </div>
 
