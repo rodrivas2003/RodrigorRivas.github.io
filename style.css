@@ -88,12 +88,19 @@ h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 10px}
 .kv a{color:var(--acc-ink);text-decoration:none;font-weight:500}
 .kv a:hover{text-decoration:underline}
 
-/* --- Diagrama (firma) --- */
-.hero-diagram{margin:0;padding:18px 18px 12px}
-.hero-diagram svg{width:100%;height:auto;display:block}
-.hero-diagram figcaption{
+/* --- Tarjeta "about" en el hero --- */
+.hero-card{border-top:3px solid var(--acc)}
+.hero-card h3{font-size:1.05rem;margin-bottom:10px}
+.hero-card p{color:var(--muted);margin:0 0 12px;font-size:.95rem}
+.hero-card p:last-child{margin-bottom:0}
+.hero-card .avail{color:var(--ink);font-weight:500}
+
+/* --- Diagrama de pipeline (sección Approach) --- */
+.pipeline{margin:0;padding:20px 20px 12px}
+.pipeline svg{width:100%;max-width:420px;height:auto;display:block;margin:0 auto}
+.pipeline figcaption{
   color:var(--muted);font-size:.82rem;text-align:center;
-  font-family:"IBM Plex Mono",monospace;padding:8px 0 4px;
+  font-family:"IBM Plex Mono",monospace;padding:10px 0 4px;
 }
 .node rect{fill:#FBFCFA;stroke:var(--line);stroke-width:1.5}
 .node.result rect{fill:var(--acc-soft);stroke:#BFDCD3}
@@ -185,7 +192,7 @@ h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 10px}
 .cert a:hover{text-decoration:underline}
 
 /* ============ About ============ */
-.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;align-items:start}
+.about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;align-items:start}
 .about-grid p{margin:0 0 14px;color:var(--muted)}
 .about-grid p:last-child{margin-bottom:0}
 .interests h4{margin-bottom:12px;font-size:1rem}
